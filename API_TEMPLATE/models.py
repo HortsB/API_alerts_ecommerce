@@ -39,7 +39,7 @@ class Product(models.Model):
     discountPercentage = models.DecimalField(max_digits=5, decimal_places=2, default=0.00)
 
     def __str__(self):
-        return self.name
+        return self.name,self.description
 
 class Category(models.Model):
     name = models.CharField(max_length=100, unique=True)

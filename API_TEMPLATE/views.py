@@ -3,6 +3,8 @@ from django.shortcuts import render
 from django.views import View
 from django.template import loader
 from .models import User
+from .models import Product
+from django.http import Http404
 
 
 
@@ -32,5 +34,9 @@ def index(request):
 #    context = {"lastest_user_list": lastest_user_list}
 #    return render(request,"index.html, context)
 
-def role(request):
-    return HttpResponse("Role details for role with ID %d" % role_id)   
+def product(request, product_id):
+    try:
+        product = Product.objects.get(pk=product_id)
+    except Product.DoesNotExist:
+        raise Http404("Product does not exist")
+    return render(request, 'product.html', {'product': product})
