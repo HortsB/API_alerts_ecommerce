@@ -31,13 +31,15 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
+    'API_TEMPLATE.apps.ApiTemplateConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'API_EXTRACT_MARKETPLACES'
+    'API_EXTRACT_MARKETPLACES',
+    'API_EXTRACT',
 ]
 
 MIDDLEWARE = [
