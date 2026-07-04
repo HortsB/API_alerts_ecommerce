@@ -1,0 +1,19 @@
+{%if lastest_user_list%}
+    <div class="card">
+        <div class="card-header">
+            <h3 class="card-title">Latest Users</h3>
+        </div>
+        <div class="card-body">
+            <ul class="list-group">
+                {% for user in lastest_user_list %}
+                    <li class="list-group item">
+                        <a href="/API_TEMPLATE/{{user.id}}/">
+                        {{user.name}} {{user.lastname}} / {{user.email}}
+                        </a>
+                        
+                    </li>
+                {% endfor %}
+            </ul>
+{% else %}
+    <p>Users no available</p>
+{% endif %}
