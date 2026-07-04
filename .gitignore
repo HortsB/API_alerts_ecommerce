@@ -1,0 +1,8 @@
+.venv
+product_images/
+db.sqlite3
+
+**/__pycache__/
+*.pyc[cod]
+
+**/migrations/__pycache__/
