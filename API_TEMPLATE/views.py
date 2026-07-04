@@ -25,3 +25,12 @@ def index(request):
     template = loader.get_template('index.html')
     context = {"lastest_user_list": lastest_user_list}
     return HttpResponse(template.render(context, request))
+
+#OTHER WAYS TO RENDER A TEMPLATE
+#def index(request):
+#    lastest_user_list = User.objects.order_by('-created_at')[:5]
+#    context = {"lastest_user_list": lastest_user_list}
+#    return render(request,"index.html, context)
+
+def role(request):
+    return HttpResponse("Role details for role with ID %d" % role_id)   
