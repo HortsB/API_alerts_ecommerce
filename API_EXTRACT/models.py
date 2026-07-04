@@ -15,5 +15,13 @@ class Product(models.Model):
 
 class User(models.Model):
     name = models.CharField(max_length=500)
+    lastname = models.CharField(max_length=500)
+    mail = models.CharField(max_length=100)
+    password = models.CharField(max_length=100)
+    telephone = models.CharField(max_length=100)
+
+class Historial (models.Model):
+    id_HxP = models.IntegerField()
+
 
 
