@@ -8,4 +8,5 @@ urlpatterns = [
     path('<str:user_name>/', views.nombre, name="user_name"),
     path('', views.index, name='index'),
     path('product/<int:product_id>/', views.product, name='product'),
+    path('user/<int:user_id>/',views.user_view, name='user'),
 ]

@@ -39,6 +39,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'API_EXTRACT_MARKETPLACES',
+    'rest_framework',
+    'corsheaders', 
+    'oauth2_provider',
     'API_EXTRACT',
 ]
 

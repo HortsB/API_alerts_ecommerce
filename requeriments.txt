@@ -2,3 +2,5 @@ django
 djangorestframework
 environs
 Pillow
+django-cors-headers
+django-oauth-toolkit

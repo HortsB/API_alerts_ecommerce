@@ -7,7 +7,7 @@
             <ul class="list-group">
                 {% for user in lastest_user_list %}
                     <li class="list-group item">
-                        <a href="/API_TEMPLATE/{{user.id}}/">
+                        <a href="{% url 'user' user.id %}">
                         {{user.name}} {{user.lastname}} / {{user.email}}
                         </a>
                         

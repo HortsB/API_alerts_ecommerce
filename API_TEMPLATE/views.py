@@ -1,10 +1,9 @@
 from django.http import HttpResponse
-from django.shortcuts import render
+from django.shortcuts import render, get_object_or_404
 from django.views import View
 from django.template import loader
 from .models import User
 from .models import Product
-from django.http import Http404
 
 
 
@@ -35,8 +34,9 @@ def index(request):
 #    return render(request,"index.html, context)
 
 def product(request, product_id):
-    try:
-        product = Product.objects.get(pk=product_id)
-    except Product.DoesNotExist:
-        raise Http404("Product does not exist")
+    product = get_object_or_404(Product, pk=product_id)
     return render(request, 'product.html', {'product': product})
+
+def user_view(request, user_id):
+    user = get_object_or_404(User, pk=user_id)
+    return render(request, 'user.html', {'user': user})
